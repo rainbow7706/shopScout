@@ -9,4 +9,10 @@ class Survey < ActiveRecord::Base
 	TYPE = ["local","global"]
 
 	
+	validates :title, presence: true
+	validates :description, presence: true
+	validates :start_date, presence: true 
+	validates :end_date, presence: true
+	validates :survey_type,presence: true 
+	validates :is_active,presence: true 
 end

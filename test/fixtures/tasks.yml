@@ -1,19 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  survey_id: 
-  title: MyString
-  ans_1: MyString
-  ans_2: MyString
-  ans_3: MyString
-  ans_4: MyString
-  ans_5: MyString
+<%  for i in 1..10 %>
+  task_<%=i%>:
+    survey_id: <%=1%> 
+    title: Title_<%=i%>
+    ans_1: ans_1_<%=i%>
+    ans_2: ans_2_<%=i%>
+    ans_3: ans_3_<%=i%>
+    ans_4: ans_4_<%=i%>
+    ans_5: ans_5_<%=i%>
+<% end %>
 
-two:
-  survey_id: 
-  title: MyString
-  ans_1: MyString
-  ans_2: MyString
-  ans_3: MyString
-  ans_4: MyString
-  ans_5: MyString
+
+
+<%  for i in 11..20 %>
+  task_<%=i%>:
+    survey_id: <%=2%> 
+    title: Title_<%=i%>
+    ans_1: ans_1_<%=i%>
+    ans_2: ans_2_<%=i%>
+    ans_3: ans_3_<%=i%>
+    ans_4: ans_4_<%=i%>
+    ans_5: ans_5_<%=i%>
+<% end %>
