@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-// require prettyprint
+//= require prettyprint
 //= require_self
 
 var currentTarget = "";

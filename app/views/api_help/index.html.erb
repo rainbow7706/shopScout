@@ -3,7 +3,94 @@
     <%= render partial: 'index', locals: {index_arr: ApiIndexRenderer.user_api_index } %>
   </div>
 </span>
+<br><br><Br>
 <span class='right_panel'>
-    
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_all_surveys',
+            link_href: 'get_all_surveys',
+            link_method: 'GET',
+            original_link: api_get_all_surveys_path,
+            parameters: [
+              {name: 'user[device_type]', description: 'user device type' },
+              {name: 'user[device_id]', description: 'user Device id' }
+            ],
+            options: {}} %>
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_global_surveys',
+            link_href: 'get_global_surveys',
+            link_method: 'GET',
+            original_link: api_get_global_surveys_path,
+            parameters: [
+              {name: 'user[device_type]', description: 'user device type' },
+              {name: 'user[device_id]', description: 'user Device id' }
+            ],
+            options: {}} %>
+
+
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_local_surveys',
+            link_href: 'get_local_surveys',
+            link_method: 'GET',
+            original_link: api_get_local_surveys_path,
+            parameters: [
+              {name: 'user[device_type]', description: 'user device type' },
+              {name: 'user[device_id]', description: 'user Device id' }
+            ],
+            options: {}} %>
+
+
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_available_surveys',
+            link_href: 'get_available_surveys',
+            link_method: 'GET',
+            original_link: api_get_available_surveys_path,
+            parameters: [
+              {name: 'user[device_type]', description: 'user device type',:required=> 1 },
+              {name: 'user[device_id]', description: 'user Device id',:required=>1 }
+            ],
+            options: {}} %>
+
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_completed_surveys',
+            link_href: 'get_completed_surveys',
+            link_method: 'GET',
+            original_link: api_get_completed_surveys_path,
+            parameters: [
+              {name: 'user[device_type]', description: 'user device type',:required=> 1 },
+              {name: 'user[device_id]', description: 'user Device id',:required=>1 }
+            ],
+            options: {}} %>
+
+
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_survey_detail',
+            link_href: 'get_survey_detail',
+            link_method: 'GET',
+            original_link: api_get_survey_detail_path,
+            parameters: [
+              {name: 'survey[survey_id]', description: 'survey id',:required=> 1 }
+            ],
+            options: {}} %>
+
+
+    <%= render  partial: 'api', locals: {
+            link_name: 'get_survey_tasks',
+            link_href: 'get_survey_tasks',
+            link_method: 'GET',
+            original_link: api_get_survey_tasks_path,
+            parameters: [
+              {name: 'survey[survey_id]', description: 'survey id',:required=> 1 },
+              {name: 'user[device_type]', description: 'user device type',:required=> 1 },
+              {name: 'user[device_id]', description: 'user device id',:required=> 1 },
+               {name: 'survey[next_task]', description: 'next task cycle-token [ enter 0 if you visit first time ]',:required=> 1 }
+            ],
+            options: {}} %>
+
+
 </span>
  
